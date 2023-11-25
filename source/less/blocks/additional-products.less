@@ -1,5 +1,6 @@
 .additional-products__title {
   margin: 0;
+  margin-bottom: 36px;
   font-family: "Oswald", sans-serif;
   color: @color-title-primary;
   font-size: 24px;
@@ -8,6 +9,7 @@
 }
 
 .additional-products__wrapper-action {
+  padding: 187px 61px 43px 58px;
   background-color: fade(@color-base-gr, 85%);
   background-image: url("../../img/green-subsrate.png"),
                     url("../../img/action.png");
@@ -15,8 +17,57 @@
 }
 
 .additional-products__action-text {
+  box-sizing: border-box;
+  margin: 0;
+  width: 161px;
+  text-align: center;
   color: @color-text-light;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-products__title {
+    margin-bottom: 80px;
+    margin-left: 40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .additional-products__wrapper-action {
+    padding: 71px 155px 69px 421px;
+    background-size: cover;
+    background-position: 50%;
+  }
+
+  .additional-products__action-text {
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-products__title {
+    margin-left: 0;
+  }
+
+  .additional-products__wrapper-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-products__list {
+    width: 895px;
+  }
+
+  .additional-products__wrapper-action {
+    align-self: center;
+    padding: 185px 42px 43px 42px;
+  }
+
+  .additional-products__action-text {
+    text-align: center;
+  }
 }

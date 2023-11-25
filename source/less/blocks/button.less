@@ -2,6 +2,7 @@
   display: block;
   box-sizing: border-box;
   padding: 10px 44px;
+  text-align: center;
   font-family: "Oswald", sans-serif;
   color: @color-text-light;
   font-size: 16px;
@@ -17,4 +18,29 @@
 .button--show-more {
   color: @color-text-primary;
   background-color: @color-bg-dark;
+  align-self: stretch;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  button.button--show-more {
+    padding-right: 80px;
+    padding-left: 80px;
+    max-width: 250px;
+    align-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  button.button--show-more {
+    padding-right: 39px;
+    padding-left: 39px;
+    max-width: 169px;
+    align-self: center;
+  }
 }

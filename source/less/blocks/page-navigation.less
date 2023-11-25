@@ -1,0 +1,22 @@
+.page-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.page-navigation__list {
+  position: absolute;
+}
+
+@media (min-width: @tablet-width) {
+  .page-navigation__toggle {
+    display: none;
+  }
+
+  .page-navigation__list {
+    position: static;
+  }
+}
+
+// @media (min-width: @tablet-desktop) {
+
+// }

@@ -6,7 +6,15 @@
   background-color: @color-bg-dark;
 }
 
+.cooperation__wrapper {
+  padding: 26px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .cooperation__title {
+  margin: 0;
   font-family: "Oswald", sans-serif;
   color: @color-text-secondary;
   font-size: 16px;
@@ -16,6 +24,7 @@
 }
 
 .cooperation__link {
+  display: block;
   font-family: "Lato", sans-serif;
   color: @color-text-primary;
   font-size: 14px;
@@ -23,4 +32,42 @@
   font-style: normal;
   line-height: 20px;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__wrapper {
+    padding: 61px 41px;
+  }
+
+  .cooperation__title {
+    max-width: 163px;
+    font-size: 20px;
+  }
+
+  .cooperation__link {
+    display: flex;
+    flex-direction: column;
+    max-width: 157px;
+    font-size: 16px;
+  }
+
+  .cooperation__link-wrapper:first-child {
+    margin-bottom: 19px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cooperation {
+    width: 565px;
+  }
+
+  .cooperation--dark {
+    background-color: @color-bg-light;
+  }
+
+  .cooperation__wrapper {
+    width: auto;
+    padding: 60px 80px;
+    padding-right: 78px;
+  }
 }

@@ -1,4 +1,17 @@
 .site-wrapper {
+  box-sizing: border-box;
   width: 280px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .site-wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-wrapper {
+    width: 1220px;
+  }
 }

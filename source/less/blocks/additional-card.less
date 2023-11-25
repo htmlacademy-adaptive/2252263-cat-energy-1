@@ -1,5 +1,17 @@
+.additional-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-card__wrapper-description {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
 .additional-card__title {
   margin: 0;
+  margin-bottom: 13px;
   font-family: "Oswald", sans-serif;
   color: @color-title-secondary;
   font-size: 16px;
@@ -9,7 +21,75 @@
 }
 
 .additional-card__description-list {
+  margin: 0;
+}
+
+.additional-card__description-item {
+  display: flex;
+  justify-content: space-between;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
+}
+
+.additional-card__meaning {
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-card__wrapper-description {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .additional-card__title {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-card__description-item {
+    display: flex;
+    column-gap: 49px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-card__button {
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-card {
+    flex-direction: row;
+  }
+
+  .additional-card__wrapper-description {
+    margin-right: 40px;
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
+  .additional-card__title {
+    margin-right: auto;
+  }
+
+  .additional-card__description-item {
+    justify-content: space-between;
+    min-width: 285px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-card__characteristic {
+    text-align: left;
+  }
+
+  .additional-card__button {
+    width: 244px;
+  }
 }

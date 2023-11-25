@@ -1,14 +1,23 @@
 .main-container__title {
   margin: 0;
+  margin-top: 27px;
+  margin-bottom: 41px;
   font-family: "Oswald", sans-serif;
   color: @color-title-primary;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+  text-align: left;
+}
+
+.main-container__title--form {
+  margin-bottom: 37px;
 }
 
 .main-container__description {
   margin: 0;
+  margin-bottom: 39px;
+  max-width: 226px;
   font-family: "Oswald", sans-serif;
   color: @color-title-primary;
   font-size: 14px;
@@ -27,4 +36,101 @@
 
 .main-container__about-us {
   margin-bottom: 49px;
+}
+
+.main-container__basic-products {
+  margin-bottom: 26px;
+}
+
+.main-container__additional-products {
+  margin-bottom: 35px;
+}
+
+.main-container__form {
+  margin-bottom: 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-container__title {
+    margin-top: 65px;
+    margin-bottom: 84px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .main-container__title--form {
+    margin-bottom: 54px;
+    margin-left: 40px;
+  }
+
+  .main-container__description {
+    margin-bottom: 66px;
+    margin-left: 40px;
+    max-width: 323px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .main-container__promo {
+    margin-bottom: 0;
+  }
+
+  .main-container__programs-container {
+    margin-bottom: 45px;
+  }
+
+  .main-container__about-us {
+    margin-bottom: 47px;
+  }
+
+  .main-container__basic-products {
+    margin-bottom: 70px;
+  }
+
+  .main-container__additional-products {
+    margin-bottom: 75px;
+  }
+
+  .main-container__form {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-container__title {
+    margin-top: 74px;
+  }
+
+  .main-container__title--form {
+    margin-bottom: 55px;
+    margin-left: 0;
+  }
+
+  .main-container__description {
+    margin-left: 0;
+  }
+
+  .main-container__promo {
+    margin-bottom: 82px;
+  }
+
+  .main-container__programs-container {
+    margin-bottom: 71px;
+  }
+
+  .main-container__about-us {
+    margin-bottom: 69px;
+  }
+
+  .main-container__basic-products {
+    margin-bottom: 76px;
+  }
+
+  .main-container__additional-products {
+    margin-bottom: 87px;
+  }
+
+  .main-container__form {
+    margin-bottom: 79px;
+  }
 }
