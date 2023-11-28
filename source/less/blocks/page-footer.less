@@ -34,14 +34,22 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer {
-    position: relative;
+  .page-footer__wrapper-cooperation {
+    display: grid;
+    grid-template-columns: auto 1220px auto;
+    grid-template-rows: repeat(3, auto);
   }
 
   .page-footer__cooperation {
-    position: absolute;
-    top: 95px;
-    left: 110px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-right: auto;
+    z-index: 1;
+  }
+
+  .page-footer__map {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
   }
 
   .page-footer__wrapper {
