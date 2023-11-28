@@ -6,6 +6,37 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 80px;
+    margin-left: 40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.additional-products__wrapper-content {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additional-products__list {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 895px;
+    margin-bottom: 0;
+  }
 }
 
 .additional-products__wrapper-action {
@@ -14,6 +45,17 @@
   background-image: url("../../img/green-subsrate.png"),
                     url("../../img/action.png");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    padding: 71px 155px 69px 421px;
+    background-size: cover;
+    background-position: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    padding: 185px 42px 43px 42px;
+  }
 }
 
 .additional-products__action-text {
@@ -25,49 +67,14 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .additional-products__title {
-    margin-bottom: 80px;
-    margin-left: 40px;
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  .additional-products__wrapper-action {
-    padding: 71px 155px 69px 421px;
-    background-size: cover;
-    background-position: 50%;
-  }
-
-  .additional-products__action-text {
+  @media (min-width: @tablet-width) {
     text-align: left;
     font-size: 16px;
     line-height: 20px;
-  }
-}
+    }
 
-@media (min-width: @desktop-width) {
-  .additional-products__title {
-    margin-left: 0;
-  }
-
-  .additional-products__wrapper-content {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .additional-products__list {
-    width: 895px;
-  }
-
-  .additional-products__wrapper-action {
-    align-self: center;
-    padding: 185px 42px 43px 42px;
-  }
-
-  .additional-products__action-text {
+  @media (min-width: @desktop-width) {
     text-align: center;
   }
 }

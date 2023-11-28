@@ -1,9 +1,19 @@
+.cooperation {
+  @media (min-width: @desktop-width) {
+    width: 565px;
+  }
+}
+
 .cooperation--light {
   background-color: @color-bg-light;
 }
 
 .cooperation--dark {
   background-color: @color-bg-dark;
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-bg-light;
+  }
 }
 
 .cooperation__wrapper {
@@ -11,6 +21,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    padding: 61px 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding: 60px 80px;
+    padding-right: 78px;
+  }
 }
 
 .cooperation__title {
@@ -21,6 +41,11 @@
   font-weight: 400;
   line-height: 26px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    max-width: 163px;
+    font-size: 20px;
+  }
 }
 
 .cooperation__link {
@@ -32,42 +57,17 @@
   font-style: normal;
   line-height: 20px;
   text-decoration: none;
-}
 
-@media (min-width: @tablet-width) {
-  .cooperation__wrapper {
-    padding: 61px 41px;
-  }
-
-  .cooperation__title {
-    max-width: 163px;
-    font-size: 20px;
-  }
-
-  .cooperation__link {
+  @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     max-width: 157px;
     font-size: 16px;
   }
-
-  .cooperation__link-wrapper:first-child {
-    margin-bottom: 19px;
-  }
 }
 
-@media (min-width: @desktop-width) {
-  .cooperation {
-    width: 565px;
-  }
-
-  .cooperation--dark {
-    background-color: @color-bg-light;
-  }
-
-  .cooperation__wrapper {
-    width: auto;
-    padding: 60px 80px;
-    padding-right: 78px;
+.cooperation__link-wrapper:first-child {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 19px;
   }
 }

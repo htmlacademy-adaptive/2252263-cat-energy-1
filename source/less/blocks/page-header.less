@@ -3,25 +3,21 @@
   padding: 13px 21px 14px 20px;
   background-color: @color-bg-light;
   color: @color-title-primary;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+    padding: 0;
+    padding-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 29px;
+    padding: 0;
+    padding-top: 55px;
+  }
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-@media (min-width: @tablet-width) {
-  .page-header {
-    margin-bottom: 65px;
-    padding: 0;
-    padding-top: 25px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-header {
-    margin-bottom: 29px;
-    padding: 0;
-    padding-top: 55px;
-  }
 }

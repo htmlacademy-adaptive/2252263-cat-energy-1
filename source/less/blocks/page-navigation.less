@@ -5,18 +5,14 @@
 
 .page-navigation__list {
   position: absolute;
-}
 
-@media (min-width: @tablet-width) {
-  .page-navigation__toggle {
-    display: none;
-  }
-
-  .page-navigation__list {
+  @media (min-width: @tablet-width) {
     position: static;
   }
 }
 
-// @media (min-width: @tablet-desktop) {
-
-// }
+.page-navigation__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

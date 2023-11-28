@@ -4,16 +4,46 @@
   grid-template-rows: repeat(3, auto);
   padding-bottom: 40px;
   background-color: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: auto 1220px auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: @color-bg-light;
+  }
 }
 
 .work-examples__wrapper-title-substrate {
   grid-column: 1/-1;
   grid-row: 1/2;
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-bg-light;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 }
 
 .work-examples__wrapper-title {
   padding-top: 25px;
   padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 60px;
+    background-color: @color-bg-light;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 76px;
+  }
 }
 
 .work-examples__title {
@@ -23,20 +53,61 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
+  }
 }
 
 .work-examples__wrapper-description-substrate {
   grid-column: 1/-1;
   grid-row: 2/3;
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-bg-light;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
+    grid-row: 2/4;
+    background-color: #eaeaea;
+  }
 }
 
 .work-examples__wrapper-description {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 250px;
+    background-color: @color-bg-light;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    padding-right: 790px;
+    padding-bottom: 75px;
+    background-color: #eaeaea;
+  }
 }
 
 .work-examples__text {
   margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
 }
 
 .work-examples__list {
@@ -45,6 +116,11 @@
   flex-wrap: wrap;
   column-gap: 32px;
   row-gap: 20px;
+
+  @media (min-width: @desktop-width) {
+    column-gap: 42px;
+    row-gap: 55px;
+  }
 }
 
 .work-examples__item {
@@ -58,12 +134,32 @@
   margin: 0 auto;
   flex-direction: row;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-right: auto;
+    margin-left: 0;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .work-examples__number {
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .work-examples__description {
@@ -75,6 +171,11 @@
   line-height: 24px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .work-examples__number--total-sum {
@@ -83,6 +184,15 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 63px;
+  }
 }
 
 .work-examples__description--total-sum {
@@ -91,136 +201,22 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .work-examples__slider {
   grid-column: 2/3;
   grid-row: 3/4;
-}
 
-@media (min-width: @tablet-width) {
-  .work-examples {
-    padding-bottom: 101px;
-  }
-
-  .work-examples__wrapper-title-substrate {
-    background-color: @color-bg-light;
-  }
-
-  .work-examples__wrapper-description-substrate {
-    background-color: @color-bg-light;
-  }
-
-  .work-examples__wrapper-title {
-    padding-top: 45px;
-    padding-bottom: 60px;
-    background-color: @color-bg-light;
-  }
-
-  .work-examples__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .work-examples__wrapper-description {
-    padding-bottom: 250px;
-    background-color: @color-bg-light;
-  }
-
-  .work-examples__text {
-    margin-bottom: 55px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .work-examples__item--total-sum {
-    margin: 0;
-    margin-left: auto;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .work-examples__number {
-    font-size: 14px;
-    line-height: 14px;
-  }
-
-  .work-examples__description {
-    font-size: 30px;
-    line-height: 37px;
-  }
-
-  .work-examples__number--total-sum {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .work-examples__description--total-sum {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  .work-examples__slider {
+  @media (min-width: @tablet-width) {
     margin-top: -152px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .work-examples {
-    grid-template-columns: auto 1220px auto;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: @color-bg-light;
-  }
-
-  .work-examples__wrapper-title-substrate {
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-
-  .work-examples__wrapper-title {
-    padding-bottom: 76px;
-  }
-
-  .work-examples__title {
-    max-width: 600px;
-  }
-
-  .work-examples__wrapper-description-substrate {
-    grid-column: 1/-1;
-    grid-row: 2/4;
-    background-color: #eaeaea;
-  }
-
-  .work-examples__wrapper-description {
-    padding-top: 70px;
-    padding-right: 790px;
-    padding-bottom: 75px;
-    background-color: #eaeaea;
-  }
-
-  .work-examples__text {
-    margin-bottom: 69px;
-  }
-
-  .work-examples__list {
-    column-gap: 42px;
-    row-gap: 55px;
-  }
-
-  .work-examples__item--total-sum {
-    margin: 0;
-    margin-right: auto;
-    margin-left: 0;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .work-examples__number--total-sum {
-    margin-right: 63px;
-  }
-
-  .work-examples__slider {
+  @media (min-width: @desktop-width) {
     grid-column: 2/3;
     grid-row: 1/-1;
     margin-top: 0;
