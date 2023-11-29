@@ -1,0 +1,18 @@
+.page-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.page-navigation__list {
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+  }
+}
+
+.page-navigation__toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

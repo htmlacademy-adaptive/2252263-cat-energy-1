@@ -1,6 +1,40 @@
+.form-group {
+  padding: 0;
+  border: none;
+}
+
 .form-group__title {
-  color: #000000;
+  color: @color-title-primary;
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form-group__title--contacts {
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+  }
+}
+
+.form-group__title--comments {
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 87px;
+  }
+}
+
+.form-group__title--additionally {
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
 }

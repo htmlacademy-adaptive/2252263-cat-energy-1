@@ -1,5 +1,35 @@
 .basic-products-list {
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    column-gap: 60px;
+    row-gap: 141px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 80px;
+    row-gap: 144px;
+  }
+}
+
+.basic-products-list__item {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    box-sizing: border-box;
+    padding: 151px 37px 40px 37px;
+    background-color: @color-bg-dark;
+  }
+}
+
+.basic-products-list__item--show-more {
+  @media (min-width: @tablet-width) {
+    padding: 50px 20px 40px 20px;
+    background-color: @color-bg-light;
+    border: 2px solid @color-bg-dark;
+  }
 }

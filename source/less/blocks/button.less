@@ -2,19 +2,43 @@
   display: block;
   box-sizing: border-box;
   padding: 10px 44px;
+  text-align: center;
   font-family: "Oswald", sans-serif;
-  color: #ffffff;
+  color: @color-text-light;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 20px;
-  background-color: #68b738;
+  background-color: @color-base-gr;
   border: none;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .button--show-more {
-  color: #444444;
-  background-color: #f2f2f2;
+  color: @color-text-primary;
+  background-color: @color-bg-dark;
+  align-self: stretch;
+}
+
+button.button--show-more {
+  @media (min-width: @tablet-width) {
+    padding-right: 80px;
+    padding-left: 80px;
+    max-width: 250px;
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 39px;
+    padding-left: 39px;
+    max-width: 169px;
+    align-self: center;
+  }
 }
