@@ -82,6 +82,11 @@
 
 .basic-card__item {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .basic-card__characteristic {
@@ -150,6 +155,23 @@
   margin-bottom: 23px;
   width: 30px;
   height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../img/show-more-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.7s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.7s;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;

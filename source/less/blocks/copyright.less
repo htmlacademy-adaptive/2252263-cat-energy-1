@@ -1,20 +1,39 @@
-.copyright {
+.copyright__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.copyright__link-text {
-  display: block;
+  width: 100%;
   font-family: "Lato", sans-serif;
   color: @color-text-primary;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
+
+  &:hover .copyright__link-image path {
+    fill: @color-base-gr;
+    transition: 0.7s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.7s;
+  }
+
+  &:active .copyright__link-image path {
+    fill: @color-base-gr;
+    transition: 0.7s;
+  }
+
+  @media (min-width: @tablet-width) {
+    column-gap: 23px;
+  }
 }
 
-.copyright__link-logo {
-  display: block;
+.copyright__link-text {
+  min-width: 113px;
+}
+
+.copyright__link-image {
   color: @color-logo;
 }

@@ -1,19 +1,8 @@
 .slider {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  min-height: 256px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 512px;
-  }
-}
-
-.slider__image {
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-  margin: 0 auto;
   width: 280px;
+  grid-template-columns: repeat(2, 1fr);
   height: 256px;
 
   @media (min-width: @tablet-width) {
@@ -22,9 +11,87 @@
   }
 }
 
+.slider__image {
+  width: 100%;
+  margin: 0 auto;
+  height: 256px;
+  overflow: hidden;
+  object-fit: cover;
+
+  &--before {
+    object-position: top 0 right 100%;
+  }
+
+  &--after {
+    object-position: top 0 right 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+}
+
 .slider__button {
   position: absolute;
+  top: 50%;
   left: 50%;
-  bottom: 50%;
-  transform: translate(50%, 50%);
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 256px;
+    background-color: #666666;
+    border-radius: 2px;
+  }
+
+  &:hover .slider__button-icon rect {
+    stroke: @color-base-gr;
+  }
+
+  &:hover .slider__button-icon path {
+    fill: @color-base-gr;
+  }
+
+  &:hover&::before {
+    background-color: @color-base-gr;
+  }
+
+  &:active .slider__button-icon rect {
+    stroke: @color-base-gr;
+    opacity: 0.6;
+  }
+
+  &:active  .slider__button-icon path {
+    fill: @color-base-gr;
+    opacity: 0.6;
+  }
+
+  &:active&::before {
+    background-color: @color-base-gr;
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      height: 512px;
+    }
+  }
+}
+
+.slider__button-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

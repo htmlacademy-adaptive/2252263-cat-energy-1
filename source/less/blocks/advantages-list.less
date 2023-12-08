@@ -15,7 +15,37 @@
 }
 
 .advantages-list__item {
+  position: relative;
   padding-left: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @color-base-gr;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--benefit::before {
+    background-image: url("../../img/advantages-benefit.svg");
+  }
+
+  &--easier::before {
+    background-image: url("../../img/advantages-easier.svg");
+  }
+
+  &--practical::before {
+    background-image: url("../../img/advantages-practical.svg");
+  }
+
+  &--fast::before {
+    background-image: url("../../img/advantages-fast.svg");
+  }
 
   @media (min-width: @tablet-width) {
     max-width: 249px;
@@ -25,5 +55,41 @@
     font-size: 16px;
     line-height: 24px;
     text-align: left;
+
+    &::before {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #f2f2f2;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      font-weight: 400;
+      line-height: 280px;
+      z-index: -1;
+    }
+
+    &--benefit::after {
+      content: "1";
+      right: 26px;
+    }
+
+    &--easier::after {
+      content: "2";
+    }
+
+    &--practical::after {
+      content: "3";
+    }
+
+    &--fast::after {
+      content: "4";
+    }
   }
 }

@@ -1,4 +1,5 @@
 .program {
+  position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -6,13 +7,130 @@
   padding: 30px 33px 18px 20px;
   background-color: @color-bg-dark;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @color-base-gr;
+    z-index: 1;
+  }
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 27px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../../img/program-slim.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
+  &--pro::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../../img/program-pro.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 77px 316px 57px 52px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 92px;
+      right: 64px;
+      left: auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: @color-base-gr;
+      z-index: 1;
+    }
+
+    &--slim::after {
+      content: "";
+      position: absolute;
+      top: 81px;
+      right: 93px;
+      left: auto;
+      width: 140px;
+      height: 194px;
+      background-image: url("../../img/program-slim.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+
+    &--pro::after {
+      content: "";
+      position: absolute;
+      top: 135px;
+      right: 29px;
+      left: auto;
+      width: 268px;
+      height: 112px;
+      background-image: url("../../img/program-pro.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 570px;
     padding: 77px 61px 59px 52px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: @color-base-gr;
+      z-index: 1;
+    }
+
+    &--slim::after {
+      content: "";
+      position: absolute;
+      top: 41px;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+      background-image: url("../../img/program-slim.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+
+    &--pro::after {
+      content: "";
+      position: absolute;
+      top: 67px;
+      left: 33px;
+      width: 134px;
+      height: 56px;
+      background-image: url("../../img/program-pro.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
   }
 }
 
@@ -41,11 +159,16 @@
 }
 
 .program__description {
+  box-sizing: border-box;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 15px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
+    padding-bottom: 0;
+    border: none;
     color: @color-title-primary;
     font-size: 16px;
     line-height: 24px;
@@ -58,6 +181,7 @@
 }
 
 .program__link {
+  position: relative;
   box-sizing: border-box;
   display: block;
   padding: 4px 47px 4px 0;
@@ -67,6 +191,38 @@
   line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
+    box-sizing: border-box;
+    width: 25px;
+    height: 10px;
+    background-image: url("../../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &:hover&::after {
+    right: 0;
+    width: 32px;
+    transition: 0.7s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.7s;
+  }
+
+  &:active&::after {
+    right: 0;
+    width: 32px;
+    transition: 0.7s;
+  }
 
   @media (min-width: @tablet-width) {
     padding-right: 57px;

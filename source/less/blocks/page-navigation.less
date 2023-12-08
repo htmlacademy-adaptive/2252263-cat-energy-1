@@ -1,18 +1,50 @@
 .page-navigation {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  z-index: 1;
+
+  @media (min-width: @desktop-width) {
+    &--index {
+      width: 50%;
+    }
+  }
 }
 
 .page-navigation__list {
   position: absolute;
+  top: 65px;
+  right: 0;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     position: static;
   }
 }
 
+.page-navigation__list--close {
+  display: none;
+}
+
 .page-navigation__toggle {
+  align-self: flex-end;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.page-navigation__toggle--close {
+  background-image: url("../../img/button-menu-open.svg");
+}
+
+.page-navigation__toggle--open {
+  background-image: url("../../img/button-menu-close.svg");
 }
