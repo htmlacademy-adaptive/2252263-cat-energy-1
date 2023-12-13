@@ -27,7 +27,7 @@
     left: -100%;
     width: 768px;
     height: 1px;
-    background-color: #ebebeb;
+    background-color: @color-bg-darkes;
   }
 
   &::after {
@@ -37,7 +37,7 @@
     right: -100%;
     width: 768px;
     height: 1px;
-    background-color: #ebebeb;
+    background-color: @color-bg-darkes;
   }
 
   @media (min-width: @tablet-width) {
@@ -47,11 +47,11 @@
     background-color: @color-bg-dark;
 
     &::before {
-      display: none;
+      content: unset;
     }
 
     &::after {
-      display: none;
+      content: unset;
     }
   }
 }
