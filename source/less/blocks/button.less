@@ -13,16 +13,15 @@
   background-color: @color-base-gr;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 
   &:hover {
     background-color: @color-active-gr;
-    transition: 0.7s;
   }
 
   &:active {
     background-color: @color-active-gr;
     color: fade(@color-text-light, 30%);
-    transition: 0.7s;
   }
 
   @media (min-width: @tablet-width) {
@@ -39,13 +38,11 @@
 
   &:hover {
     background-color: @color-bg-darkes;
-    transition: 0.7s;
   }
 
   &:active {
     background-color: @color-bg-darkes;
     color: fade(@color-text-primary, 30%);
-    transition: 0.7s;
   }
 }
 

@@ -8,6 +8,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     justify-content: flex-end;
+    row-gap: 0;
     padding: 0;
   }
 }
@@ -17,6 +18,10 @@
   align-items: center;
   row-gap: 0;
   padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .basic-card__image {
@@ -162,15 +167,14 @@
   background-position: center;
   background-size: cover;
   cursor: pointer;
+  transition: opacity 0.3s;
 
   &:hover {
     opacity: 0.8;
-    transition: 0.7s;
   }
 
   &:active {
     opacity: 0.3;
-    transition: 0.7s;
   }
 
   @media (min-width: @tablet-width) {
