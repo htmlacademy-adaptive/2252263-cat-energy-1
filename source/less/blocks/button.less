@@ -13,6 +13,16 @@
   background-color: @color-base-gr;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: @color-active-gr;
+  }
+
+  &:active {
+    background-color: @color-active-gr;
+    color: fade(@color-text-light, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 14px 26px;
@@ -25,6 +35,15 @@
   color: @color-text-primary;
   background-color: @color-bg-dark;
   align-self: stretch;
+
+  &:hover {
+    background-color: @color-bg-darkes;
+  }
+
+  &:active {
+    background-color: @color-bg-darkes;
+    color: fade(@color-text-primary, 30%);
+  }
 }
 
 button.button--show-more {

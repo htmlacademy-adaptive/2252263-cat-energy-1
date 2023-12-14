@@ -8,6 +8,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     justify-content: flex-end;
+    row-gap: 0;
     padding: 0;
   }
 }
@@ -17,6 +18,10 @@
   align-items: center;
   row-gap: 0;
   padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .basic-card__image {
@@ -82,6 +87,11 @@
 
 .basic-card__item {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 4px;
+    border-bottom: 1px solid @color-border;
+  }
 }
 
 .basic-card__characteristic {
@@ -150,6 +160,22 @@
   margin-bottom: 23px;
   width: 30px;
   height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../img/show-more-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;

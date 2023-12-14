@@ -1,9 +1,15 @@
+.social {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
 .social__list {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 24px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -15,4 +21,14 @@
   height: 22px;
   color: @color-logo;
   text-decoration: none;
+  transition: color 0.3s, opacity 0.3s;
+
+  &:hover {
+    color: @color-base-gr;
+  }
+
+  &:active {
+    color: @color-base-gr;
+    opacity: 0.3;
+  }
 }

@@ -1,0 +1,33 @@
+.basic-products {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 768px;
+    height: 1px;
+    background-color: @color-bg-darkes;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -100%;
+    width: 768px;
+    height: 1px;
+    background-color: @color-bg-darkes;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: unset;
+    }
+
+    &::after {
+      content: unset;
+    }
+  }
+}
