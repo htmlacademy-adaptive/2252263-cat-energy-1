@@ -17,6 +17,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/green-subsrate@2x.png"),
+                        url("../../img/promo-bg-image@2x.png");
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -35,7 +40,12 @@
       height: 100%;
       background-image: url("../../img/green-subsrate.png"),
                         url("../../img/promo-bg-image.jpg");
-      background-position: bottom 0 right 100%;
+      background-position: bottom 90% right 80%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/green-subsrate@2x.png"),
+                          url("../../img/promo-bg-image@2x.jpg");
+      }
     }
   }
 }
@@ -129,6 +139,8 @@
   @media (min-width: @tablet-width) {
     grid-row: 3/4;
     grid-column: 1/-1;
+    margin-top: -70px;
+    margin-left: -50px;
     max-height: 609px;
   }
 
@@ -137,7 +149,7 @@
     grid-column: 2/3;
     margin-top: 29px;
     margin-bottom: 0;
-    margin-left: -37px;
+    margin-left: -53px;
     max-width: 552px;
     height: 499px;
   }
