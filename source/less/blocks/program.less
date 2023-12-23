@@ -26,7 +26,7 @@
     left: 27px;
     width: 36px;
     height: 50px;
-    background-image: url("../../img/program-slim.svg");
+    background-image: url("../../img/sprite.svg#program-slim");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 2;
@@ -36,10 +36,10 @@
     content: "";
     position: absolute;
     top: 35px;
-    left: 13px;
+    left: 11px;
     width: 67px;
     height: 28px;
-    background-image: url("../../img/program-pro.svg");
+    background-image: url("../../img/sprite.svg#program-pro");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 2;
@@ -49,44 +49,27 @@
     padding: 77px 316px 57px 52px;
 
     &::before {
-      content: "";
-      position: absolute;
       top: 92px;
       right: 64px;
       left: auto;
       width: 200px;
       height: 200px;
-      border-radius: 50%;
-      background-color: @color-base-gr;
-      z-index: 1;
     }
 
     &--slim::after {
-      content: "";
-      position: absolute;
       top: 81px;
       right: 93px;
       left: auto;
       width: 140px;
       height: 194px;
-      background-image: url("../../img/program-slim.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: 2;
     }
 
     &--pro::after {
-      content: "";
-      position: absolute;
       top: 135px;
       right: 29px;
       left: auto;
       width: 268px;
       height: 112px;
-      background-image: url("../../img/program-pro.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: 2;
     }
   }
 
@@ -95,41 +78,24 @@
     padding: 77px 61px 59px 52px;
 
     &::before {
-      content: "";
-      position: absolute;
       top: 47px;
       left: 52px;
       width: 100px;
       height: 100px;
-      border-radius: 50%;
-      background-color: @color-base-gr;
-      z-index: 1;
     }
 
     &--slim::after {
-      content: "";
-      position: absolute;
       top: 41px;
       left: 67px;
       width: 70px;
       height: 97px;
-      background-image: url("../../img/program-slim.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: 2;
     }
 
     &--pro::after {
-      content: "";
-      position: absolute;
       top: 67px;
       left: 33px;
       width: 134px;
       height: 56px;
-      background-image: url("../../img/program-pro.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: 2;
     }
   }
 }
@@ -197,11 +163,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 7px;
     box-sizing: border-box;
+    margin-left: 25px;
     width: 25px;
-    height: 10px;
-    background-image: url("../../img/arrow-right.svg");
+    height: 12px;
+    mask-image: url("../../img/sprite.svg#arrow-right");
+    background-color: #000000;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -209,7 +176,6 @@
   }
 
   &:hover&::after {
-    right: 0;
     width: 32px;
   }
 

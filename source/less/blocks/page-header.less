@@ -78,11 +78,13 @@
   }
 
   &--close {
-    background-image: url("../../img/button-menu-open.svg");
+    mask-image: url("../../img/sprite.svg#button-menu-open");
+    background-color: @color-title-primary;
   }
 
   &--open {
-    background-image: url("../../img/button-menu-close.svg");
+    mask-image: url("../../img/sprite.svg#button-menu-close");
+    background-color: @color-title-primary;
   }
 
   @media (min-width: @tablet-width) {
