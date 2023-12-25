@@ -51,29 +51,20 @@
     transform: translate(-50%, -50%);
     width: 4px;
     height: 256px;
-    background-color: #666666;
+    background-color: @color-logo;
     border-radius: 2px;
   }
 
-  &:hover .slider__button-icon rect {
-    stroke: @color-base-gr;
-  }
-
-  &:hover .slider__button-icon path {
-    fill: @color-base-gr;
+  &:hover .slider__button-icon use {
+    color: @color-base-gr;
   }
 
   &:hover&::before {
     background-color: @color-base-gr;
   }
 
-  &:active .slider__button-icon rect {
-    stroke: @color-base-gr;
-    opacity: 0.6;
-  }
-
-  &:active  .slider__button-icon path {
-    fill: @color-base-gr;
+  &:active .slider__button-icon use {
+    color: @color-base-gr;
     opacity: 0.6;
   }
 
@@ -94,4 +85,8 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+
+  & use {
+    color: @color-logo;
+  }
 }

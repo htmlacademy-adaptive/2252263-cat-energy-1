@@ -21,14 +21,14 @@
       outline-color: @color-border;
     }
 
+    &:invalid {
+      border: none;
+      outline: 2px solid @color-invalid;
+    }
+
     &:focus {
       border: none;
       outline: 2px solid @color-text-primary;
-    }
-
-    &:focus:invalid {
-      border: none;
-      outline: 2px solid @color-invalid;
     }
 
     &:disabled {
@@ -78,14 +78,14 @@
       outline-color: @color-border;
     }
 
-    &:focus {
-      border: none;
-      outline: 2px solid @color-text-primary;
-    }
-
     &:invalid {
       border: none;
       outline: 2px solid @color-invalid;
+    }
+
+    &:focus {
+      border: none;
+      outline: 2px solid @color-text-primary;
     }
 
     &:disabled {
@@ -94,12 +94,12 @@
       background-color: @color-border;
     }
 
-    &:invalid + .form-list__field-icon path {
-      stroke: @color-invalid;
+    &:invalid + .form-list__field-icon use {
+      color: @color-invalid;
     }
 
-    &:focus + .form-list__field-icon path {
-      stroke: @color-base-gr;
+    &:focus + .form-list__field-icon use {
+      color: @color-base-gr;
     }
   }
 
@@ -107,6 +107,10 @@
     position: absolute;
     top: 13px;
     right: 12px;
+
+    & use {
+      color: @color-title-primary;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -225,10 +229,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("../../img/field-icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: clip;
+  mask-image: url("../../img/sprite.svg#field-icon-tick");
+  background-color: @color-base-gr;
 }
 
 .form-list__control-field[type="radio"]:checked + .form-list__control-mark::before {
