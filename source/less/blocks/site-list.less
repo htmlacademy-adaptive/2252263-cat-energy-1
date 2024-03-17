@@ -10,7 +10,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: flex-end;
-    column-gap: 33px;
+    column-gap: 34px;
     flex-wrap: wrap;
   }
 
@@ -33,6 +33,10 @@
     width: auto;
     border: none;
 
+    &:last-child {
+      margin-right: 2px;
+    }
+
     &--current {
       position: relative;
 
@@ -40,7 +44,7 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: 2px;
         left: 0;
         height: 2px;
         background-color: @color-base-gr;

@@ -9,6 +9,9 @@
     <link rel="apple-touch-icon" href="./img/favicon/apple-180.png">
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -158,9 +161,11 @@
         <section class="page-footer__cooperation cooperation cooperation--dark">
           <div class="cooperation__wrapper site-wrapper">
             <h2 class="visually-hidden">Сотрудничество.</h2>
-            <p class="cooperation__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="cooperation__title">Приглашаем<br> к сотрудничеству дилеров!</p>
             <address class="cooperation__address">
-              <a class="cooperation__link" href="#" target="_blank">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</a>
+              <a class="cooperation__link" href="#" target="_blank">
+                <span class="cooperation__link-wrapper">ул. Большая Конюшенная, д. 19/8</span>
+                <span class="cooperation__link-wrapper">Санкт-Петербург</span></a>
             </address>
           </div>
         </section>
@@ -170,8 +175,8 @@
         </div>
       </div>
       <div class="page-footer__wrapper site-wrapper">
-        <a class="page-footer__logo-link logo-link" href="index.html">
-          <img class="logo-link__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Интернет магазин: Кэт энерджи.">
+        <a class="page-footer__logo-link logo-link" href="#">
+          <img class="logo-link__logo-text logo-link__logo-text--footer" src="img/logo-text.svg" width="128" height="24" alt="Интернет магазин: Кэт энерджи.">
         </a>
         <section class="page-footer__social social">
           <h2 class="visually-hidden">Наши социальные сети.</h2>

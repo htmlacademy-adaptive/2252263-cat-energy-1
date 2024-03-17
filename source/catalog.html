@@ -9,6 +9,9 @@
     <link rel="apple-touch-icon" href="./img/favicon/apple-180.png">
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -41,24 +44,26 @@
     </header>
     <main class="main-container">
       <div class="main-container__wrapper site-wrapper">
-        <h1 class="main-container__title">Каталог продукции</h1>
+        <h1 class="main-container__title main-container__title--catalog">Каталог продукции</h1>
         <section class="main-container__basic-products basic-products">
           <h2 class="visually-hidden">Основные товары.</h2>
           <ul class="basic-products__list basic-products-list">
             <li class="basic-products-list__item">
               <article class="basic-products-list__container basic-card">
                 <div class="basic-card__image-container">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-500-desktop.webp 1x, ./img/cards/pro-chiсken-500-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-500-tablet.webp 1x, ./img/cards/pro-chiсken-500-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/cards/pro-chiсken-500-mobile.webp 1x, ./img/cards/pro-chiсken-500-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-500-desktop.png 1x, ./img/cards/pro-chiсken-500-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-500-tablet.png 1x, ./img/cards/pro-chiсken-500-tablet@2x.png 2x">
-                    <img class="basic-card__image basic-card__image" src="./img/cards/pro-chiсken-500-mobile.png" srcset="./img/cards/pro-chiсken-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 500 грамм со вкусом курицы.">
-                  </picture>
+                  <a class="basic-card__link" href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-500-desktop.webp 1x, ./img/cards/pro-chiсken-500-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-500-tablet.webp 1x, ./img/cards/pro-chiсken-500-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/cards/pro-chiсken-500-mobile.webp 1x, ./img/cards/pro-chiсken-500-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-500-desktop.png 1x, ./img/cards/pro-chiсken-500-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-500-tablet.png 1x, ./img/cards/pro-chiсken-500-tablet@2x.png 2x">
+                      <img class="basic-card__image basic-card__image" src="./img/cards/pro-chiсken-500-mobile.png" srcset="./img/cards/pro-chiсken-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 500 грамм со вкусом курицы.">
+                    </picture>
+                  </a>
                 </div>
-                <div class="basic-card__container-description">
-                  <h3 class="basic-card__title">Cat Energy PRO 500 г</h3>
+                <div class="basic-card__container-description" id="catalog-pro">
+                  <h3 class="basic-card__title"><a class="basic-card__link" href="#">Cat Energy PRO 500 г</a></h3>
                   <dl class="basic-card__list">
                     <div class="basic-card__item">
                       <dt class="basic-card__characteristic">Масса</dt>
@@ -80,17 +85,19 @@
             <li class="basic-products-list__item">
               <article class="basic-products-list__container basic-card">
                 <div class="basic-card__image-container">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-1000-desktop.webp 1x, ./img/cards/pro-chiсken-1000-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-1000-tablet.webp 1x, ./img/cards/pro-chiсken-1000-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/cards/pro-chiсken-1000-mobile.webp 1x, ./img/cards/pro-chiсken-1000-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-1000-desktop.png 1x, ./img/cards/pro-chiсken-1000-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-1000-tablet.png 1x, ./img/cards/pro-chiсken-1000-tablet@2x.png 2x">
-                    <img class="basic-card__image basic-card__image--big" src="./img/cards/pro-chiсken-1000-mobile.png" srcset="./img/cards/pro-chiсken-1000-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 1000 грамм со вкусом курицы.">
-                  </picture>
+                  <a class="basic-card__link" href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-1000-desktop.webp 1x, ./img/cards/pro-chiсken-1000-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-1000-tablet.webp 1x, ./img/cards/pro-chiсken-1000-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/cards/pro-chiсken-1000-mobile.webp 1x, ./img/cards/pro-chiсken-1000-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="./img/cards/pro-chiсken-1000-desktop.png 1x, ./img/cards/pro-chiсken-1000-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/cards/pro-chiсken-1000-tablet.png 1x, ./img/cards/pro-chiсken-1000-tablet@2x.png 2x">
+                      <img class="basic-card__image basic-card__image--big" src="./img/cards/pro-chiсken-1000-mobile.png" srcset="./img/cards/pro-chiсken-1000-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 1000 грамм со вкусом курицы.">
+                    </picture>
+                  </a>
                 </div>
                 <div class="basic-card__container-description">
-                  <h3 class="basic-card__title">Cat Energy PRO 1000 г</h3>
+                  <h3 class="basic-card__title"><a class="basic-card__link" href="#">Cat Energy PRO 1000 г</a></h3>
                   <dl class="basic-card__list">
                     <div class="basic-card__item">
                       <dt class="basic-card__characteristic">Масса</dt>
@@ -112,17 +119,19 @@
             <li class="basic-products-list__item">
               <article class="basic-products-list__container basic-card">
                 <div class="basic-card__image-container">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-fish-500-desktop.webp 1x, ./img/cards/pro-fish-500-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-fish-500-tablet.webp 1x, ./img/cards/pro-fish-500-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/cards/pro-fish-500-mobile.webp 1x, ./img/cards/pro-fish-500-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="./img/cards/pro-fish-500-desktop.png 1x, ./img/cards/pro-fish-500-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="./img/cards/pro-fish-500-tablet.png 1x, ./img/cards/pro-fish-500-tablet@2x.png 2x">
-                    <img class="basic-card__image" src="./img/cards/pro-fish-500-mobile.png" srcset="./img/cards/pro-fish-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 500 грамм со вкусом рыбы.">
-                  </picture>
+                  <a class="basic-card__link" href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-fish-500-desktop.webp 1x, ./img/cards/pro-fish-500-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-fish-500-tablet.webp 1x, ./img/cards/pro-fish-500-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/cards/pro-fish-500-mobile.webp 1x, ./img/cards/pro-fish-500-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="./img/cards/pro-fish-500-desktop.png 1x, ./img/cards/pro-fish-500-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/cards/pro-fish-500-tablet.png 1x, ./img/cards/pro-fish-500-tablet@2x.png 2x">
+                      <img class="basic-card__image" src="./img/cards/pro-fish-500-mobile.png" srcset="./img/cards/pro-fish-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 500 грамм со вкусом рыбы.">
+                    </picture>
+                  </a>
                 </div>
                 <div class="basic-card__container-description">
-                  <h3 class="basic-card__title">Cat Energy PRO 500 г</h3>
+                  <h3 class="basic-card__title"><a class="basic-card__link" href="#">Cat Energy PRO 500 г</a></h3>
                   <dl class="basic-card__list">
                     <div class="basic-card__item">
                       <dt class="basic-card__characteristic">Масса</dt>
@@ -144,17 +153,19 @@
             <li class="basic-products-list__item">
               <article class="basic-products-list__container basic-card">
                 <div class="basic-card__image-container">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-fish-1000-desktop.webp 1x, ./img/cards/pro-fish-1000-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-fish-1000-tablet.webp 1x, ./img/cards/pro-fish-1000-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/cards/pro-fish-1000-mobile.webp 1x, ./img/cards/pro-fish-1000-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="./img/cards/pro-fish-1000-desktop.png 1x, ./img/cards/pro-fish-1000-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="./img/cards/pro-fish-1000-tablet.png 1x, ./img/cards/pro-fish-1000-tablet@2x.png 2x">
-                    <img class="basic-card__image basic-card__image--big" src="./img/cards/pro-fish-1000-mobile.png" srcset="./img/cards/pro-fish-1000-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 1000 грамм со вкусом рыбы.">
-                  </picture>
+                  <a class="basic-card__link" href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/pro-fish-1000-desktop.webp 1x, ./img/cards/pro-fish-1000-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/pro-fish-1000-tablet.webp 1x, ./img/cards/pro-fish-1000-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/cards/pro-fish-1000-mobile.webp 1x, ./img/cards/pro-fish-1000-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="./img/cards/pro-fish-1000-desktop.png 1x, ./img/cards/pro-fish-1000-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/cards/pro-fish-1000-tablet.png 1x, ./img/cards/pro-fish-1000-tablet@2x.png 2x">
+                      <img class="basic-card__image basic-card__image--big" src="./img/cards/pro-fish-1000-mobile.png" srcset="./img/cards/pro-fish-1000-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy pro 1000 грамм со вкусом рыбы.">
+                    </picture>
+                  </a>
                 </div>
                 <div class="basic-card__container-description">
-                  <h3 class="basic-card__title">Cat Energy PRO 1000 г</h3>
+                  <h3 class="basic-card__title"><a class="basic-card__link" href="#">Cat Energy PRO 1000 г</a></h3>
                   <dl class="basic-card__list">
                     <div class="basic-card__item">
                       <dt class="basic-card__characteristic">Масса</dt>
@@ -176,17 +187,19 @@
             <li class="basic-products-list__item">
               <article class="basic-products-list__container basic-card">
                 <div class="basic-card__image-container">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-500-desktop.webp 1x, ./img/cards/slim-buckwheat-500-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-500-tablet.webp 1x, ./img/cards/slim-buckwheat-500-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/cards/slim-buckwheat-500-mobile.webp 1x, ./img/cards/slim-buckwheat-500-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-500-desktop.png 1x, ./img/cards/slim-buckwheat-500-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-500-tablet.png 1x, ./img/cards/slim-buckwheat-500-tablet@2x.png 2x">
-                    <img class="basic-card__image" src="./img/cards/slim-buckwheat-500-mobile.png" srcset="./img/cards/slim-buckwheat-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy slim 500 грамм со вкусом гречки.">
-                  </picture>
+                  <a class="basic-card__link" href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-500-desktop.webp 1x, ./img/cards/slim-buckwheat-500-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-500-tablet.webp 1x, ./img/cards/slim-buckwheat-500-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/cards/slim-buckwheat-500-mobile.webp 1x, ./img/cards/slim-buckwheat-500-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-500-desktop.png 1x, ./img/cards/slim-buckwheat-500-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-500-tablet.png 1x, ./img/cards/slim-buckwheat-500-tablet@2x.png 2x">
+                      <img class="basic-card__image" src="./img/cards/slim-buckwheat-500-mobile.png" srcset="./img/cards/slim-buckwheat-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy slim 500 грамм со вкусом гречки.">
+                    </picture>
+                  </a>
                 </div>
-                <div class="basic-card__container-description">
-                  <h3 class="basic-card__title">Cat Energy SLIM 500 г</h3>
+                <div class="basic-card__container-description" id="catalog-slim">
+                  <h3 class="basic-card__title"><a class="basic-card__link" href="#">Cat Energy SLIM 500 г</a></h3>
                   <dl class="basic-card__list">
                     <div class="basic-card__item">
                       <dt class="basic-card__characteristic">Масса</dt>
@@ -208,17 +221,19 @@
             <li class="basic-products-list__item">
               <article class="basic-products-list__container basic-card">
                 <div class="basic-card__image-container">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-1000-desktop.webp 1x, ./img/cards/slim-buckwheat-1000-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-1000-tablet.webp 1x, ./img/cards/slim-buckwheat-1000-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/cards/slim-buckwheat-1000-mobile.webp 1x, ./img/cards/slim-buckwheat-1000-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-1000-desktop.png 1x, ./img/cards/slim-buckwheat-1000-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-1000-tablet.png 1x, ./img/cards/slim-buckwheat-1000-tablet@2x.png 2x">
-                    <img class="basic-card__image basic-card__image--big" src="./img/cards/slim-buckwheat-1000-mobile.png" srcset="./img/cards/slim-buckwheat-1000-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy slim 1000 грамм со вкусом гречки.">
-                  </picture>
+                  <a class="basic-card__link" href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-1000-desktop.webp 1x, ./img/cards/slim-buckwheat-1000-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-1000-tablet.webp 1x, ./img/cards/slim-buckwheat-1000-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/cards/slim-buckwheat-1000-mobile.webp 1x, ./img/cards/slim-buckwheat-1000-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="./img/cards/slim-buckwheat-1000-desktop.png 1x, ./img/cards/slim-buckwheat-1000-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/cards/slim-buckwheat-1000-tablet.png 1x, ./img/cards/slim-buckwheat-1000-tablet@2x.png 2x">
+                      <img class="basic-card__image basic-card__image--big" src="./img/cards/slim-buckwheat-1000-mobile.png" srcset="./img/cards/slim-buckwheat-1000-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy slim 1000 грамм со вкусом гречки.">
+                    </picture>
+                  </a>
                 </div>
                 <div class="basic-card__container-description">
-                  <h3 class="basic-card__title">Cat Energy SLIM 1000 г</h3>
+                  <h3 class="basic-card__title"><a class="basic-card__link" href="#">Cat Energy SLIM 1000 г</a></h3>
                   <dl class="basic-card__list">
                     <div class="basic-card__item">
                       <dt class="basic-card__characteristic">Масса</dt>
@@ -240,17 +255,19 @@
             <li class="basic-products-list__item">
               <article class="basic-products-list__container basic-card">
                 <div class="basic-card__image-container">
-                  <picture>
-                    <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/slim-rice-500-desktop.webp 1x, ./img/cards/slim-rice-500-desktop@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/slim-rice-500-tablet.webp 1x, ./img/cards/slim-rice-500-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/cards/slim-rice-500-mobile.webp 1x, ./img/cards/slim-rice-500-mobile@2x.webp 2x">
-                    <source media="(min-width: 1440px)" srcset="./img/cards/slim-rice-500-desktop.png 1x, ./img/cards/slim-rice-500-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="./img/cards/slim-rice-500-tablet.png 1x, ./img/cards/slim-rice-500-tablet@2x.png 2x">
-                    <img class="basic-card__image" src="./img/cards/slim-rice-500-mobile.png" srcset="./img/cards/slim-rice-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy slim 500 грамм со вкусом риса.">
-                  </picture>
+                  <a class="basic-card__link" href="#">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="./img/cards/slim-rice-500-desktop.webp 1x, ./img/cards/slim-rice-500-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/cards/slim-rice-500-tablet.webp 1x, ./img/cards/slim-rice-500-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/cards/slim-rice-500-mobile.webp 1x, ./img/cards/slim-rice-500-mobile@2x.webp 2x">
+                      <source media="(min-width: 1440px)" srcset="./img/cards/slim-rice-500-desktop.png 1x, ./img/cards/slim-rice-500-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/cards/slim-rice-500-tablet.png 1x, ./img/cards/slim-rice-500-tablet@2x.png 2x">
+                      <img class="basic-card__image" src="./img/cards/slim-rice-500-mobile.png" srcset="./img/cards/slim-rice-500-mobile@2x.png 2x" width="140" height="107" alt="Cat Energy slim 500 грамм со вкусом риса.">
+                    </picture>
+                  </a>
                 </div>
                 <div class="basic-card__container-description">
-                  <h3 class="basic-card__title">Cat Energy SLIM 500 г</h3>
+                  <h3 class="basic-card__title"><a class="basic-card__link" href="#">Cat Energy SLIM 500 г</a></h3>
                   <dl class="basic-card__list">
                     <div class="basic-card__item">
                       <dt class="basic-card__characteristic">Масса</dt>
@@ -304,7 +321,7 @@
                   <div class="additional-card__wrapper-description">
                     <h3 class="additional-card__title">Питьевая вода</h3>
                     <dl class="additional-card__description-list">
-                      <div class="additional-card__description-item">
+                      <div class="additional-card__description-item additional-card__description-item--water">
                         <dt class="additional-card__characteristic">5 литров</dt>
                           <dd class="additional-card__meaning">50 ₽</dd>
                       </div>
@@ -354,9 +371,11 @@
         <section class="page-footer__cooperation cooperation cooperation--dark">
           <div class="cooperation__wrapper site-wrapper">
             <h2 class="visually-hidden">Сотрудничество.</h2>
-            <p class="cooperation__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="cooperation__title">Приглашаем<br> к сотрудничеству дилеров!</p>
             <address class="cooperation__address">
-              <a class="cooperation__link" href="#" target="_blank">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</a>
+              <a class="cooperation__link" href="#" target="_blank">
+                <span class="cooperation__link-wrapper">ул. Большая Конюшенная, д. 19/8</span>
+                <span class="cooperation__link-wrapper">Санкт-Петербург</span></a>
             </address>
           </div>
         </section>
@@ -366,8 +385,8 @@
         </div>
       </div>
       <div class="page-footer__wrapper site-wrapper">
-        <a class="page-footer__logo-link logo-link" href="index.html">
-          <img class="logo-link__logo-text" src="img/logo-text.svg" width="128" height="24" alt="Интернет магазин: Кэт энерджи.">
+        <a class="page-footer__logo-link logo-link" href="#">
+          <img class="logo-link__logo-text logo-link__logo-text--footer" src="img/logo-text.svg" width="128" height="24" alt="Интернет магазин: Кэт энерджи.">
         </a>
         <section class="page-footer__social social">
           <h2 class="visually-hidden">Наши социальные сети.</h2>
