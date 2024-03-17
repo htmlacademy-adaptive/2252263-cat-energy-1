@@ -43,7 +43,7 @@
   @media (min-width: @tablet-width) {
     position: relative;
     box-sizing: border-box;
-    padding: 151px 37px 40px 37px;
+    padding: 160px 37px 40px 37px;
     background-color: @color-bg-dark;
 
     &::before {
@@ -53,6 +53,10 @@
     &::after {
       content: unset;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 151px;
   }
 }
 
