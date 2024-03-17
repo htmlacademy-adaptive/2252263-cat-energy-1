@@ -7,11 +7,23 @@
   list-style: none;
   counter-reset: advantages 0;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
     row-gap: 37px;
+    column-gap: 58px;
     flex-wrap: wrap;
+
+    & br {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 0;
   }
 }
 
@@ -51,6 +63,7 @@
 
 
   @media (min-width: @tablet-width) {
+    margin-right: 76px;
     max-width: 249px;
     padding-top: 151px;
     padding-bottom: 57px;
@@ -63,6 +76,7 @@
       top: 40px;
       width: 80px;
       height: 80px;
+      background-size: 60px;
     }
 
     &::after {
@@ -80,6 +94,21 @@
 
     &--benefit::after {
       right: 26px;
+    }
+  }
+
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      left: 2px;
+    }
+
+    &--practical {
+      margin-right: 72px;
+    }
+
+    &--fast {
+      margin-right: 0;
     }
   }
 }
