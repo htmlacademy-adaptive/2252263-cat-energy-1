@@ -26,6 +26,11 @@
       outline: 2px solid @color-invalid;
     }
 
+    &:invalid:placeholder-shown {
+      border: none;
+      outline: 2px solid @color-text-primary;
+    }
+
     &:focus {
       border: none;
       outline: 2px solid @color-text-primary;
@@ -87,6 +92,11 @@
       outline: 2px solid @color-invalid;
     }
 
+    &:invalid:placeholder-shown {
+      border: none;
+      outline: 2px solid @color-text-primary;
+    }
+
     &:focus {
       border: none;
       outline: 2px solid @color-text-primary;
@@ -102,7 +112,15 @@
       color: @color-invalid;
     }
 
+    &:invalid:placeholder-shown + .form-list__field-icon use {
+      color: @color-text-primary;
+    }
+
     &:focus + .form-list__field-icon use {
+      color: @color-base-gr;
+    }
+
+    &:focus:placeholder-shown + .form-list__field-icon use {
       color: @color-base-gr;
     }
   }
